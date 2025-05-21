@@ -73,6 +73,15 @@ Select all readonly classes.
 ## Selector::isTrait()
 Select all traits.
 
+## Selector::isBuiltin()
+Selects all PHP built-in (standard) classes. This includes all classes provided by the PHP core and extensions, such as `\Exception`, `\Throwable`, `\DateTime`, etc. User-defined classes in the global namespace are **not** included.
+
+```php
+Selector::isBuiltin()
+```
+
+This will select only the standard PHP classes, which is useful for rules that allow dependencies on language constructs or standard exceptions, but not on user-defined global classes.
+
 <br />
 
 ---

@@ -59,6 +59,11 @@ class SelectorPrimitive
         return new IsAttribute();
     }
 
+    public static function isBuiltin(): IsBuiltin
+    {
+        return new IsBuiltin();
+    }
+
     /**
      * @param class-string|non-empty-string $namespace
      */
